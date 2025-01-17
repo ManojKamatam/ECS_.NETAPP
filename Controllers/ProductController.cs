@@ -25,7 +25,16 @@ public class ProductController : ControllerBase
     [HttpPost]
     public ActionResult<Product> Create(Product product)
     {
-        _products.Add(product);
-        return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
+        // No need to check for null Name or Price as the required keyword ensures they are provided
+    var newProduct = new Product
+    {
+        Id = product.Id,
+        Name = product.Name,
+        Price = product.Price,
+        Description = product.Description // This is optional
+    };
+    
+    _products.Add(newProduct);
+    return CreatedAtAction(nameof(GetById), new { id = newProduct.Id }, newProduct);
     }
 }
