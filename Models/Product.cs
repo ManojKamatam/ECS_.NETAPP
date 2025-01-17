@@ -1,8 +1,12 @@
 // Models/Product.cs
+// Models/Product.cs
 public class Product
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public decimal Price { get; set; }
-    public string Description { get; set; }
+    public required int Id { get; init; }
+    
+    public required string Name { get; init; }
+    
+    public required decimal Price { get; init; }
+    
+    public string? Description { get; init; } // Making Description optional since it might not always be needed
 }
