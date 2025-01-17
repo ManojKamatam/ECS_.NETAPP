@@ -1,7 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
 
-var builder = WebApplication.CreateBuilder(args);
-
 // Add this configuration
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
