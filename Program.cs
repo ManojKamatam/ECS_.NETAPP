@@ -1,4 +1,3 @@
-// Program.cs
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,7 +14,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Comment out or remove this line
+// app.UseHttpsRedirection();
+
 app.UseAuthorization();
 app.MapControllers();
 
