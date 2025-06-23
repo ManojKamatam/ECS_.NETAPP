@@ -1,4 +1,4 @@
-// Controllers/ProductController.cs and 
+// Controllers/ProductController.cs
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
